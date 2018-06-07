@@ -1,5 +1,6 @@
 ProjectTitle: l-team
 
 PageList:
-- file: page.html
+- file: index.html
+- file: gallery.html
   ready: 50

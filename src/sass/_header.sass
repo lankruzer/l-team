@@ -1,0 +1,96 @@
+.btn-burger-menu
+	position: absolute
+	top: 15px
+	left: 20px
+	z-index: 10
+	width: 43px
+	height: 32px
+	font-size: 0
+	background: transparent
+	border: 0
+	&:hover
+		.lines
+			border-color: $light
+			&::before,
+			&::after
+				border-color: $light
+		
+	&.is-active
+		top: 35px
+		left: 30px
+		&:hover
+			.lines
+				border-color: transparent
+				&::before,
+				&::after
+					border-color: $light
+
+.burger-menu-list
+	position: absolute
+	top: 22px
+	left: 20px
+	z-index: 5
+	box-sizing: border-box
+	margin: 0
+	padding: 50px 60px
+	width: 405px
+	max-height: calc(100vh - 92px) 
+	height: auto
+	list-style: none
+	background-color: transparentize($dark, .1)
+	border: 1px solid $gray
+	overflow: auto
+	transform: translateY(calc(-100% - 42px))
+	transition: .25s
+	+r(1400)
+		padding: 30px 45px
+	+r(1200)
+		width: 360px
+		padding: 20px 40px
+	+r(992)
+		width: 340px
+		padding: 20px 30px
+	+r(768)
+		padding: 20px 20px
+		width: 320px
+		max-height: calc(100vh - 44px) 		
+	+r(567)
+		top: 0
+		left: 0
+		width: 100%
+		max-height: 100vh
+		height: 100vh
+		text-align: center
+	&.is-active
+		transform: translateY(0)
+	&-li
+		&__link
+			display: inline-block
+			vertical-align: middle
+			font-family: $assistant
+			+fs(48)
+			+lh(48, 85)
+			+ls(-10)
+			text-decoration: none
+			color: $light
+			transition: .25s
+			+r(1400)
+				+fs(38)
+			+r(1200)
+				+fs(28)
+			+r(992)
+				+fs(24)
+			+r(768)
+				+fs(22)
+			+r(768)
+				+fs(26)
+			&:hover
+				text-decoration: none
+				color: darken($light, 40)
+			&:focus
+				text-decoration: none
+				color: darken($light, 60)
+		&.is-active .burger-menu-list-li__link
+			color: $gray-dark-extra
+
+

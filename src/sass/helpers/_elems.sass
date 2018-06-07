@@ -1,0 +1,37 @@
+// lines
+.lines
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	box-sizing: border-box
+	width: 43px
+	height: 3px
+	background-color: transparent
+	border: 1px solid $gray
+	transition: .25s
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		right: -1px
+		box-sizing: border-box
+		width: 43px
+		height: 3px
+		background-color: transparent
+		border: 1px solid $gray
+		transition: .25s
+	&::before
+		top: -8px
+	&::after
+		bottom: -8px
+
+.is-active
+	.lines
+		border-color: transparent
+		&::before
+			top: -1px
+			transform: rotate(45deg)
+		&::after
+			bottom: -1px
+			transform: rotate(-45deg)
+// /lines
