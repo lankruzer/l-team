@@ -5,20 +5,73 @@ title: Index page | L-team
 
 {% block content %}
 	
-	{# variable example #}
-	<h1>{{title}}</h1>
+	<!-- begin hero -->
+	<section class="hero">
+		
+		<!-- begin hero-nav -->
+		<nav class="hero-nav">
+			<ul class="hero-nav-list">
+				<li class="hero-nav-list-li is-active">
+					<a href="#" class="hero-nav-list-li__link">על עצמי</a>
+				</li>
+				<li class="hero-nav-list-li">
+					<a href="#" class="hero-nav-list-li__link">עבודות</a>
+				</li>
+				<li class="hero-nav-list-li">
+					<a href="#" class="hero-nav-list-li__link">תחומי עיסוק</a>
+				</li>
+				<li class="hero-nav-list-li">
+					<a href="#" class="hero-nav-list-li__link">צור קשר</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- end hero-nav -->
+
+		<div class="hero-logo">
+			<img src="img/logo-big.png" alt="l-team" class="hero-logo__logo">			
+			<h1 class="hide">l-team - nest company </h1>
+		</div>
+
+		<div class="hero-info">
+			<div class="hero-info__big-year">2018</div>
+			<div class="hero-info-content">
+				<div class="hero-info-content__text">בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</div>
+				<div class="hero-info-content-years">
+					<span class="hero-info-content-years__year">2018</span>
+					<span class="hero-info-content-years__year">2017</span>
+					<span class="hero-info-content-years__year">2016</span>
+					<span class="hero-info-content-years__year">2015</span>
+					<span class="hero-info-content-years__year">2014</span>
+					<span class="hero-info-content-years__year">2013</span>
+					<span class="hero-info-content-years__year">2012</span>
+					<span class="hero-info-content-years__year">2011</span>
+					<span class="hero-info-content-years__year">2010</span>
+				</div>
+			</div>
+		</div>
+
+		<ul class="icons icons_hero">
+			<li class="icons__icon">
+				{{mixins.icon('screen-icon-1')}}			
+			</li>
+			<li class="icons__icon">
+				{{mixins.icon('screen-icon-2')}}			
+			</li>
+			<li class="icons__icon">
+				{{mixins.icon('screen-icon-3')}}			
+			</li>
+			<li class="icons__icon">
+				{{mixins.icon('screen-icon-4')}}			
+			</li>
+			<li class="icons__icon">
+				{{mixins.icon('screen-icon-5')}}			
+			</li>
+		</ul>
+
+	</section>
+	<!-- end hero -->
+	
 
 	
-	{# mixin example #}
-	{{mixins.icon('screen-icon-1')}}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
 
 {% endblock %}

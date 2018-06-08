@@ -1,0 +1,39 @@
+.hero-nav
+	position: absolute
+	top: 8.5%
+	right: 45px
+	+r(1400)
+		top: 6.5%
+	+r(1300)
+		top: 4.5%
+	&-list
+		margin: 0
+		padding: 0
+		list-style: none
+		&-li
+			&__link
+				position: relative
+				display: inline-block
+				vertical-align: middle
+				font-family: $assistant
+				+fs(18)
+				+lh(18, 34)
+				+ls(-10)
+				color: $light
+				text-decoration: none
+				transition: .25s
+				overflow: visable
+				&:hover
+					color: darken($light, 40)
+					text-decoration: none
+			&.is-active .hero-nav-list-li__link
+				&::before
+					content: ''
+					position: absolute
+					top: 50%
+					left: calc(100% + 12px)
+					box-sizing: border-box
+					width: 19px
+					height: 19px
+					border: 1px solid $gray
+					transform: translateY(-50%)
