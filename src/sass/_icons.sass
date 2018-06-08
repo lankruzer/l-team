@@ -1,0 +1,28 @@
+.icons
+	display: flex
+	&_hero
+		+r(1600)
+			justify-content: flex-end
+			width: 30%
+		+r(1260)
+			box-sizing: border-box
+			padding-right: 40px
+			width: 370px
+		+r(992)
+			justify-content: space-between
+			padding: 0
+			width: 100%
+			.icons__icon
+				margin: 0
+	&__icon
+		margin-right: 10px
+		padding: 10px
+		box-sizing: border-box
+		width: 48px
+		height: 48px
+		border: 1px solid $light
+		border-radius: 50%
+		.icon
+			width: 100%
+			height: 100%
+			fill: $light
