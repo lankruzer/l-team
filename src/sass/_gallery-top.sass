@@ -1,0 +1,53 @@
+.gallery-top
+	position: relative
+	margin: 0 auto 80px
+	padding: 75px 15px 0
+	box-sizing: border-box
+	max-width: 760px
+	+r(992)
+		margin-bottom: 60px
+		padding-top: 85px
+		width: 560px
+	+r(768)
+		width: 80%
+	+r(500)
+		padding-top: 100px
+		width: 100%
+	&::before
+		content: ''
+		position: absolute
+		top: 45px
+		right: -135px
+		z-index: -1
+		width: 330px
+		height: 330px
+		+image('print.png')
+		background-size: contain
+		overflow: visible
+		+r(1200)
+			right: -100px
+		+r(992)
+			right: -70px
+		+r(768)
+			right: -10%
+	&__title
+		margin: 0 0 15px
+		+fs(87)
+		font-weight: 200
+		color: $light
+		+r(1366)
+			margin: 0 0 10px
+			+fs(67)
+		+r(1200)
+			margin: 0 0 10px
+			+fs(57)
+		+r(768)
+			+fs(47)
+		+r(600)
+			margin: 0 0 5px
+			+fs(40)
+	&__text
+		+fs(18px)
+		+lh(18px, 18px)
+		p
+			margin: 0

@@ -1,27 +1,47 @@
 ---
-title: Index page
+title: Gallery page
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+
+	<a href="index.html" class="link-to-index">
+		<img class="link-to-index__img" src="img/logo.png" alt="">
+	</a>
+
+	<section class="gallery-top">
+		<h1 class="gallery-top__title">עבודות דפוס</h1>
+		<div class="gallery-top__text">
+			<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+		</div>
+	</section>
 	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
+	{% import "data/data.html" as data %}
 
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
+	{% for item in data.gallery %}
+		<article class="gallery-block">
+			<div class="gallery-block-info">
+				<h2 class="gallery-block-info__title">{{item.title}}</h2>
+				<div class="gallery-block-info__text">
+					<p>{{item.text}}</p>
+				</div>
+			</div>
+			<div class="gallery-block-img">
+				<img src="{{item.img}}" alt="" class="gallery-block-img__img">
+			</div>
+		</article>
+	{% endfor %}
 
+	<!-- begin screen-text -->
+	<section class="screen-text">
+		<h2 class="screen-text__title">בוא נעבוד ביחד</h2>
+		<div class="screen-text__text">
+			<p>ספר לנו את היעדים העסקיים שלך
+ונראה כיצד נוכל ליצור משהו מדהים ביחד</p>
+		</div>
+	</section>
+	<!-- end screen-text -->
 
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
 
 {% endblock %}

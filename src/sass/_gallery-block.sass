@@ -1,0 +1,64 @@
+.gallery-block
+	margin: 0 auto 80px
+	box-sizing: border-box
+	padding: 0 15px
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	max-width: 1140px
+	width: 100%
+	+r(992)
+		margin-bottom: 50px
+	&-info
+		position: relative
+		box-sizing: border-box
+		margin-top: 80px
+		padding: 5px 12px 20px 20px
+		width: 190px
+		+r(992)
+			margin-top: 50px
+			padding: 5px 12px 10px 20px
+		+r(600)
+			margin-top: 25px
+			width: 150px
+		+r(500)
+			margin-top: 0
+			margin-bottom: 10px
+			width: 100%
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			box-sizing: border-box
+			width: 14px
+			height: 12px
+			border: 
+				top: 2px solid $light
+				right: 2px solid $light			
+		&__title
+			margin: 0 0 20px
+			+fs(24)
+			font-weight: 400
+			color: #eaeaea
+			+r(600)
+				margin-bottom: 10px
+				+fs(20)
+		&__text
+			+fs(16)
+			+lh(16, 18)
+			p
+				margin: 0
+	&-img
+		width: calc(100% - 190px)
+		text-align: center
+		+r(600)
+			width: calc(100% - 150px)
+		+r(500)
+			width: 100%
+		&__img
+			display: inline-block
+			vertical-align: top
+			max-width: 100%
+			width: auto
+			height: auto
