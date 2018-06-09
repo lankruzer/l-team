@@ -26,3 +26,50 @@
 			width: 100%
 			height: 100%
 			fill: $light
+	&_screen-icons
+		margin-bottom: 95px
+		+r(1366)
+			margin-bottom: 75px
+		+r(1200)
+			margin-bottom: 55px
+		+r(992)
+			margin-bottom: 35px
+		+r(600)
+			margin-bottom: 20px
+			flex-wrap: wrap
+			justify-content: center
+		.icons__icon
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 32px
+			width: 176px
+			height: 176px
+			border-color: #4a4b4d
+			transition: .25s
+			+r(1150)
+				margin-right: 25px
+				width: 150px
+				height: 150px
+			+r(992)
+				margin-right: 15px
+				width: 100px
+				height: 100px
+			+r(600)
+				margin: 0 5px 10px
+				width: 85px
+				height: 85px
+				border-color: $light
+			&:first-of-type
+				margin-right: 0
+			.icon
+				width: 70%
+				height: 70%
+				fill: #4a4b4d
+				transition: .25s
+				+r(600)
+					fill: $light
+			&:hover 
+				border-color: $light
+				.icon
+					fill: $light	

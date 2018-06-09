@@ -1,0 +1,31 @@
+.screen-icons
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	min-height: 500px
+	max-height: 830px
+	height: 100vh
+	box-sizing: border-box
+	padding: 0 15px
+	text-align: center
+	+image('../img/screen-icons-bg.jpg')
+	+cover
+	+r(992)
+		min-height: 400px
+	+r(600)
+		padding: 50px 15px
+		height: auto
+	&-text
+		width: 910px
+		+fs(24)
+		+lh(24, 30)
+		+r(1366)
+			width: 75%
+		+r(992)
+			+fs(20)
+		+r(600)
+			width: 100%
+			+fs(18)
+		p
+			margin: 0
