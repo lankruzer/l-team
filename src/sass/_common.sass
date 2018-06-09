@@ -1,5 +1,6 @@
 body
-	background: $dark-blue
+	padding-bottom: 190px
+	background: #03060a
 	direction: rtl
 	text-align: right
 	font-family: $assistant
@@ -8,6 +9,13 @@ body
 	font-weight: 200
 	line-height: 1.125
 	color: $light
+	+r(992)
+		padding-bottom: 120px
+
+main
+	position: relative
+	z-index: 2
+	background-color: #03060a
 
 .hide
 	display: none
