@@ -47,6 +47,7 @@
 			height: 176px
 			border-color: #4a4b4d
 			transition: .25s
+			cursor: pointer
 			+r(1150)
 				margin-right: 25px
 				width: 150px
@@ -68,6 +69,10 @@
 				fill: #4a4b4d
 				transition: .25s
 				+r(600)
+					fill: $light
+			&.is-active
+				border-color: $light 
+				.icon
 					fill: $light
 			&:hover 
 				border-color: $light

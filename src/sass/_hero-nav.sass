@@ -1,7 +1,8 @@
 .hero-nav
-	position: absolute
+	position: fixed
 	top: 8.5%
 	right: 45px
+	z-index: 20	
 	+r(1400)
 		top: 6.5%
 	+r(1300)
@@ -22,11 +23,10 @@
 				color: $light
 				text-decoration: none
 				transition: .25s
-				overflow: visable
+				overflow: visible
 				&:hover
 					color: darken($light, 40)
 					text-decoration: none
-			&.is-active .hero-nav-list-li__link
 				&::before
 					content: ''
 					position: absolute
@@ -37,3 +37,8 @@
 					height: 19px
 					border: 1px solid $gray
 					transform: translateY(-50%)
+					opacity: 0
+					transition: .25s
+			&.is-active .hero-nav-list-li__link
+				&::before
+					opacity: 1

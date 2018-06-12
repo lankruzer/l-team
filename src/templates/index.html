@@ -6,22 +6,22 @@ title: Index page | L-team
 {% block content %}
 	
 	<!-- begin hero -->
-	<section class="hero">
+	<section id="screen-hero" class="hero">
 		
 		<!-- begin hero-nav -->
 		<nav class="hero-nav">
 			<ul class="hero-nav-list">
 				<li class="hero-nav-list-li is-active">
-					<a href="#" class="hero-nav-list-li__link">על עצמי</a>
+					<a href="#screen-hero" class="hero-nav-list-li__link">על עצמי</a>
 				</li>
 				<li class="hero-nav-list-li">
-					<a href="#" class="hero-nav-list-li__link">עבודות</a>
+					<a href="#screen-posts" class="hero-nav-list-li__link">עבודות</a>
 				</li>
 				<li class="hero-nav-list-li">
-					<a href="#" class="hero-nav-list-li__link">תחומי עיסוק</a>
+					<a href="#screen-icons" class="hero-nav-list-li__link">תחומי עיסוק</a>
 				</li>
 				<li class="hero-nav-list-li">
-					<a href="#" class="hero-nav-list-li__link">צור קשר</a>
+					<a href="#screen-text" class="hero-nav-list-li__link">צור קשר</a>
 				</li>
 			</ul>
 		</nav>
@@ -72,7 +72,7 @@ title: Index page | L-team
 	<!-- end hero -->
 
 	<!-- begin posts -->
-	<div class="posts">
+	<div id="screen-posts" class="posts">
 		
 		<!-- begin posts-row -->
 		<div class="posts-row">
@@ -164,9 +164,9 @@ title: Index page | L-team
 	<!-- end posts -->
 
 	<!-- begin screen-icons -->
-	<div class="screen-icons">
-		<ul class="icons icons_screen-icons">
-			<li class="icons__icon">
+	<div id="screen-icons" class="screen-icons tabs">
+		<ul class="icons icons_screen-icons tabs-nav">
+			<li class="icons__icon is-active">
 				{{mixins.icon('screen-icon-1')}}			
 			</li>
 			<li class="icons__icon">
@@ -183,14 +183,28 @@ title: Index page | L-team
 			</li>
 		</ul>
 
-		<div class="screen-icons-text">
-			<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+		<div class="screen-icons-text tabs-content">
+			<div class="tabs-content-item is-active">1
+				<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+			</div>
+			<div class="tabs-content-item">2
+				<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+			</div>
+			<div class="tabs-content-item">3
+				<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+			</div>
+			<div class="tabs-content-item">4
+				<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+			</div>
+			<div class="tabs-content-item">5
+				<p>בניגוד לטענה הרווחת, Lorem Ipsum אינו סתם טקסט רנדומלי. יש לו שורשים וחלקים מתוך הספרות הלטינית הקלאסית מאז 45 לפני הספירה. מה שהופך אותו לעתיק מעל 2000 שנה. ריצ'רד מקלינטוק, פרופסור לטיני בקולג' של המפדן-סידני בורג'יניה, חיפש את אחת המילים המעורפלות ביותר בלטינית - consectetur - מתוך פסקאות</p>
+			</div>
 		</div>
 	</div>
 	<!-- end screen-icons -->
 
 	<!-- begin screen-text -->
-	<section class="screen-text">
+	<section id="screen-text" class="screen-text">
 		<h2 class="screen-text__title">בוא נעבוד ביחד</h2>
 		<div class="screen-text__text">
 			<p>ספר לנו את היעדים העסקיים שלך
